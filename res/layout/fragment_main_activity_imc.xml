@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.imc.MainActivityIMC$PlaceholderFragment" >
+
+    <EditText
+        android:id="@+id/peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Peso" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/altura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/peso"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/peso"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Altura" />
+
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resultado"
+        android:layout_below="@+id/altura"
+        android:onClick="imc"
+        android:text="Calcular" />
+
+    <EditText
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/altura"
+        android:layout_alignRight="@+id/altura"
+        android:layout_below="@+id/calc"
+        android:ems="10"
+        android:hint="Resultado" />
+
+    <EditText
+        android:id="@+id/labelSituacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resultado"
+        android:layout_below="@+id/resultado"
+        android:ems="10"
+        android:enabled="false" />
+
+</RelativeLayout>
